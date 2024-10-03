@@ -4,7 +4,7 @@ main {
   max-width: 720px;
   padding: 20px;
   margin: 0 auto; /* 전체 내용을 중간(center)에 두기 */
-  font-family: "Noto Sans KR"
+  font-family: 'Noto Sans KR';
 }
 
 header {
@@ -21,6 +21,7 @@ header nav {
 
 header a {
   text-decoration: none; /* 텍스트에서 밑줄 제거 */
+  color: inherit;
 }
 
 header a.logo {
@@ -52,6 +53,11 @@ div.post div.texts h2 {
   font-size: 18px;
 }
 
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
 div.post p.info {
   margin: 6px 0px; /* 왼쪽으로 붙이기 */
   color: #777;
@@ -68,7 +74,39 @@ div.post p.summary {
   margin: 6px 0px; /* 왼쪽으로 붙이기 */
 }
 
-form.login, form.register {
+div.single-post div.image {
+  max-height: 200px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.single-post div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.single-post h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+div.single-post time {
+  text-align: center;
+  display: block;
+  color: #aaa;
+}
+
+div.single-post div.author {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.single-post div.content {
+  line-height: 1.5rem;
+}
+
+form.login,
+form.register {
   max-width: 480px;
   margin: 0 auto;
 }
@@ -100,5 +138,8 @@ button {
   }
   .search-input {
     width: 130px;
+  }
+  div.post {
+    grid-template-columns: 1fr;
   }
 }
